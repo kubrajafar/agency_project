@@ -1,0 +1,117 @@
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+nav {
+  background-color: #28293e;
+  padding-top: 16px;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-container {
+      max-width: 1170px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+
+      .nav-menu {
+        ul {
+          display: flex;
+          gap: 90px;
+
+          li {
+            list-style: none;
+            font-size: 16px;
+            font-weight: 400;
+            a {
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .nav-hamburger {
+        cursor: pointer;
+        display: none;
+      }
+      .nav-contact-btn {
+        border: 1px solid #ffffff4b;
+        border-radius: 6px;
+
+        button {
+          font-weight: 900;
+          font-size: 14px;
+          text-align: center;
+          color: #ffffff;
+          padding: 16px 34px;
+          background: none;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  nav {
+    .container {
+      .nav-container {
+        .nav-menu {
+          ul {
+            gap: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    .container {
+      .nav-container {
+        .nav-menu {
+          height: 0;
+          overflow: hidden;
+
+          &.active {
+            width: 90%;
+            position: absolute;
+            height: 140px;
+
+            top: 80px;
+            background-color: #28293e;
+            ul {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              gap: 20px;
+
+              li {
+                list-style: none;
+                font-size: 16px;
+                font-weight: 400;
+                a {
+                  text-decoration: none;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+        .nav-hamburger {
+          display: block;
+        }
+        .nav-contact-btn {
+          display: none;
+        }
+      }
+    }
+  }
+}
